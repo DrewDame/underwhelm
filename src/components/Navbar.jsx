@@ -20,7 +20,7 @@ const Navbar = () => {
                 </ul>
                 <ul id="navbar-right" className="right">
                     <li>
-                        Words
+                        Placeholder
                     </li>
                 </ul>
                 
