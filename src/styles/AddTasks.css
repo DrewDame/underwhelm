@@ -1,0 +1,91 @@
+#add-container {
+    border: 1px solid black;
+    border-radius: 2.4rem;
+    color: black;
+    font-size: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60rem;
+    padding: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #D9EBDB;
+    /* gap: 3rem; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    /* font-size: 2.8rem; */
+}
+
+#add-form h2 {
+    font-weight: normal;
+}
+
+#add-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#add-name input {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+}
+
+#add-name label {
+    margin-bottom: 1rem; /* Add space between the label and the input */
+}
+
+#add-duration-option-container {
+    display: flex;
+    flex-direction: row;
+    /* gap: 2rem; */
+}
+
+.add-duration-option {
+    border: 2px solid black;
+    display: flex;
+    user-select: none;
+    padding: 1rem;
+    /* transition: background-color 0.3s; */
+}
+
+.add-duration-option input {
+    display: none;
+}
+
+.add-duration-option:hover {
+    cursor: pointer;
+    background-color: #C7E0C9;
+}
+
+.add-duration-option:has(input:checked){
+    background-color: #A1CCA5;
+}
+
+/* Floating checkmark styles */
+.floating-checkmark {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: green;
+    opacity: 1;
+    animation: floatUp 1.5s ease-out;
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -30px); }
+}

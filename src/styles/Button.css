@@ -1,0 +1,23 @@
+button {
+    background-color: #ECF5ED;
+    border: 1px solid #415D43;
+    color: #415D43;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    /* font-weight: bold; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s; /* Add transition for smooth effect */
+    border-radius: 6px;
+    line-height: 1;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px #415D43; /* Add box shadow */
+    transform: translate(-4px, -4px); /* Move the button to the left and up */
+}

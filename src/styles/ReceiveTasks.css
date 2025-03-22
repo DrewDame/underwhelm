@@ -1,0 +1,80 @@
+#receive-container {
+    border: 1px solid black;
+    border-radius: 2.4rem;
+    color: black;
+    font-size: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60rem;
+    padding: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #D9EBDB;
+    /* gap: 3rem; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#receive-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    /* font-size: 2.8rem; */
+}
+
+#receive-duration-option-container {
+    display: flex;
+    flex-direction: row;
+    /* gap: 2rem; */
+}
+
+.receive-duration-option {
+    border: 2px solid black;
+    display: flex;
+    user-select: none;
+    padding: 1rem;
+    position: relative; /* Required for tooltip positioning */
+}
+
+.receive-duration-option input {
+    display: none;
+}
+
+.receive-duration-option:hover {
+    cursor: pointer;
+    background-color: #C7E0C9;
+}
+
+.receive-duration-option:has(input:checked){
+    background-color: #A1CCA5;
+}
+
+.receive-duration-option.unavailable {
+    background-color: #e0e0e0; /* Light gray background for unavailable options */
+    color: #6c757d; /* Dark gray text for unavailable options */
+    cursor: not-allowed; /* Change cursor to indicate the option is not selectable */
+}
+
+.receive-duration-option.unavailable .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the element */
+    left: 50%;
+    margin-left: -80px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.receive-duration-option.unavailable:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
