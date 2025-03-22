@@ -1,7 +1,7 @@
 import React from 'react';
 import "../styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({showPopup}) => {
     return (
         <nav id="navbar">
             <div id="navbar-container">
@@ -11,15 +11,15 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <ul id="navbar-list" className="middle">
-                    <li>
+                <li onClick={() => showPopup(<h2>This feature has not yet been added</h2>)}>
                         See All Tasks
                     </li>
-                    <li>
+                    <li onClick={() => showPopup(<h2>This feature has not yet been added</h2>)}>
                         Tutorial
                     </li>
                 </ul>
                 <ul id="navbar-right" className="right">
-                    <li>
+                    <li onClick={() => showPopup(<h2>This feature has not yet been added</h2>)}>
                         Placeholder
                     </li>
                 </ul>
