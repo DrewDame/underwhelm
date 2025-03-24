@@ -29,6 +29,8 @@
   #app-container {
     width: 60%;
     margin: 0 auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
     /* background-color: blue; */
   }
 }
