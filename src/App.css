@@ -24,3 +24,9 @@
   align-items: center;
   gap: 4rem;
 }
+
+@media (max-width: 768px) {
+  #app-container {
+    width: 80%;
+  }
+}
