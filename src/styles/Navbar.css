@@ -35,10 +35,6 @@ nav ul {
     margin: 0; */
 }
 
-nav ul.left {
-    /* justify-content: flex-start; */
-}
-
 nav ul.middle {
     justify-content: center;
     gap: 2rem;
@@ -46,11 +42,11 @@ nav ul.middle {
     margin-right: auto; */
 }
 
-nav ul.right {
-    /* justify-content: flex-end; */
-}
-
 nav ul li:hover {
     color: #415D43;
     cursor: pointer;
 }
+
+/* #tutorial-popup-container {
+
+} */

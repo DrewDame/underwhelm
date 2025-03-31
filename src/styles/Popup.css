@@ -11,36 +11,64 @@
     z-index: 1000;
 }
 
+/* Popup container styles */
 #popup-window {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
-    color: black;
+    max-width: 400px; /* Limit the maximum width of the popup */
+    width: 90%; /* Make it responsive */
+    text-align: left; /* Align text to the left for better readability */
+    color: black; /* Ensure text is readable */
+    background-color: white; /* White background for contrast */
+    padding: 2rem; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: relative; /* For positioning the close button */
+    overflow-y: auto; /* Add scroll if content overflows */
+    max-height: 80vh; /* Prevent the popup from exceeding the viewport height */
 }
 
+/* Headings inside the popup */
 #popup-window h2 {
-    font-size: 3.2rem;
+    font-size: 3.2rem; /* Main heading size */
+    margin-bottom: 1.8rem; /* Adjust spacing below the heading */
+    color: #333; /* Darker color for emphasis */
 }
 
-#popup-close {
+#popup-window h3 {
+    font-size: 2.6rem; /* Subheading size proportional to h2 */
+    margin-top: 2.4rem; /* Adjust spacing above subheadings */
+    margin-bottom: 1.2rem; /* Adjust spacing below subheadings */
+    color: #415D43; /* Optional: Use a theme color */
+}
+
+/* Paragraphs inside the popup */
+#popup-window p {
+    font-size: 2rem; /* Paragraph text size proportional to h2 */
+    line-height: 1.8; /* Improve readability with proper line height */
+    margin-bottom: 1.2rem; /* Add spacing between paragraphs */
+    color: #555; /* Slightly lighter color for body text */
+}
+
+/* Close button styles */
+.popup-close {
+    all: unset; /* Remove default button styles */
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    cursor: pointer;
+    font-size: 2rem; /* Size of the close button proportional to h2 */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    color: #999; /* Subtle color for the close button */
+    padding: 0.5rem;
+    /* border-radius: 50%; Optional: Make it circular */
+    transition: color 0.2s ease, transform 0.2s ease; /* Add hover effects */
 }
 
-#popup-close:hover {
-    color: red;
+.popup-close:hover {
+    box-shadow: none;
+    color: #415D43; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
 }
 
+/* Add fade-in animation for the popup */
 @keyframes popup-fade-in {
     from {
         opacity: 0;
@@ -53,5 +81,19 @@
 }
 
 #popup-window {
-    animation: popup-fade-in 0.3s ease-out;
+    animation: popup-fade-in 0.3s ease-out; /* Apply the fade-in animation */
+}
+
+/* Ensure the popup is scrollable on smaller screens */
+#popup-window::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#popup-window::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded scrollbar thumb */
+}
+
+#popup-window::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* Darker color on hover */
 }
